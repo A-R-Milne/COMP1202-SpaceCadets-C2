@@ -20,10 +20,12 @@ public class Main {
             packet = new Packet(varList, codeList);
             packet = codeBlock.loop(packet);
         } catch (FileNotFoundException e) {
-            System.out.println("Error (5): File not found: " + filename);
+            System.out.println("Error (4): File not found: " + filename);
             System.exit(0);
         } catch (Exception e) {
             System.out.println("Error (0): Unknown error. Please contact your system administrator to resolve this issue.");
+            System.out.println(e.getMessage());
+            System.exit(0);
         }
         System.out.println("Code execution complete!");
         System.out.println("Final variable states are as follows:");

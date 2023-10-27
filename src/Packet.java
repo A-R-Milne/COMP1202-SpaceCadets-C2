@@ -53,8 +53,16 @@ public class Packet {
         getVarList().printAllVars();
     }
     
-    public void clear(String varName) {
-        getVarList().clear(varName);
+    public void assign(String varName) {
+        getVarList().assign(varName);
+    }
+
+    public void assign(String varName, float value) {
+        getVarList().assign(varName, value);
+    }
+
+    public void assign(String varName, String value) {
+        getVarList().assign(varName, value);
     }
 
     public void incr(String varName) {
@@ -63,5 +71,21 @@ public class Packet {
 
     public void decr(String varName) {
         getVarList().decr(varName);
+    }
+
+    public void add(String var1, String var2, String varOut) {
+        getVarList().add(var1,var2,varOut);
+    }
+
+    public void subtract(String var1, String var2, String varOut) {
+        getVarList().subtract(var1,var2,varOut);
+    }
+
+    public void multiply(String var1, String var2, String varOut) {
+        getVarList().multiply(var1,var2,varOut);
+    }
+
+    public void divide(String var1, String var2, String varOut) {
+        getVarList().divide(var1,var2,varOut);
     }
 }
